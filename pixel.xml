@@ -18,13 +18,13 @@
     <remove-project name="vendor_aosp" />
 
     <!-- 2by2 forks -->
-    <project path="frameworks/base" name="frameworks_base" revision="thirteen-plus" remote="2by2" />
-    <project path="frameworks/av" name="frameworks_av" revision="thirteen" remote="2by2" />
-    <project path="packages/apps/Settings" name="packages_apps_Settings" revision="thirteen-plus"  remote="2by2" />
-    <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" revision="thirteen" remote="2by2" />
-    <project path="device/custom/sepolicy" name="device_custom_sepolicy" revision="thirteen" remote="2by2" />
+    <project path="frameworks/base" name="frameworks_base" revision="13" remote="2by2" />
+    <project path="frameworks/av" name="frameworks_av" revision="13" remote="2by2" />
+    <project path="packages/apps/Settings" name="packages_apps_Settings" revision="13"  remote="2by2" />
+    <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" revision="13" remote="2by2" />
+    <project path="device/custom/sepolicy" name="device_custom_sepolicy" revision="13" remote="2by2" />
     <project path="vendor/2by2" name="vendor_2by2" revision="13" remote="2by2" />
-    <project path="vendor/aosp" name="vendor_aosp" revision="thirteen-plus" remote="2by2" />
+    <project path="vendor/aosp" name="vendor_aosp" revision="13" remote="2by2" />
 
     <!-- Lineage -->
     <project path="packages/modules/adb" name="android_packages_modules_adb" revision="lineage-20.0" remote="lineage" />
