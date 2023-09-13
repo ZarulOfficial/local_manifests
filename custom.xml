@@ -2,46 +2,13 @@
 <manifest>
 
     <remote name="github" fetch="https://github.com/" />
+    <remote name="gitlab" fetch="https://gitlab.com/" />
     <remote name="2by2" fetch="https://github.com/2by2-Project/" />
     <remote name="lineage" fetch="https://github.com/LineageOS/" />
     <remote name="crdroid" fetch="https://github.com/crdroidandroid/" />
-    <remote name="pixel-os" fetch="https://github.com/PixelOS-AOSP/" />
-    <remote name="graphene" fetch="https://github.com/GrapheneOS/" />
-
-    <!-- Remove -->
-    <remove-project name="frameworks_base" />
-    <remove-project name="frameworks_av" />
-    <remove-project name="packages_apps_Settings" />
-    <remove-project name="packages_modules_Bluetooth" />
-    <remove-project name="packages_modules_adb" />
-    <remove-project name="device_custom_sepolicy" />
-    <remove-project name="vendor_aosp" />
-
-    <remove-project path="hardware/google/gchips" />
-    <remove-project path="hardware/google/graphics/common" />
-
-    <!-- 2by2 forks -->
-    <project path="frameworks/base" name="frameworks_base" revision="13" remote="2by2" />
-    <project path="frameworks/av" name="frameworks_av" revision="13" remote="2by2" />
-    <project path="packages/apps/Settings" name="packages_apps_Settings" revision="13"  remote="2by2" />
-    <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" revision="13" remote="2by2" />
-    <project path="device/custom/sepolicy" name="device_custom_sepolicy" revision="13" remote="2by2" />
-    <project path="vendor/2by2" name="vendor_2by2" revision="13" remote="2by2" />
-    <project path="vendor/aosp" name="vendor_aosp" revision="13" remote="2by2" />
-
-    <!-- Lineage -->
-    <project path="packages/modules/adb" name="android_packages_modules_adb" revision="lineage-20.0" remote="lineage" />
-    <project path="hardware/google/gchips" name="android_hardware_google_gchips" revision="lineage-20.0" remote="lineage" />
-    <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" revision="lineage-20.0" remote="lineage" />
-
-    <!-- Graphene -->
-    <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" revision="13" remote="graphene" />
 
     <!-- crDroid -->
     <project path="packages/apps/Matlog" name="android_packages_apps_Matlog" revision="13.0" remote="crdroid" />
-
-    <!-- Proton-clang for older kernel building -->
-    <project path="prebuilts/clang/host/linux-x86/proton" name="kdrag0n/proton-clang" revision="master" remote="github" />
 
     <!-- Pixel 6/6 Pro/6a/7/7 Pro/7a/Tablet/Fold kernel modules -->
     <project path="kernel/google/gs201/private/devices/google/bluejay" name="kernel/devices/google/bluejay" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
