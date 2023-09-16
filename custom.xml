@@ -4,8 +4,29 @@
     <remote name="github" fetch="https://github.com/" />
     <remote name="gitlab" fetch="https://gitlab.com/" />
     <remote name="2by2" fetch="https://github.com/2by2-Project/" />
+    <remote name="2by2-gitlab" fetch="https://gitlab.com/2by2-Project/" />
     <remote name="lineage" fetch="https://github.com/LineageOS/" />
     <remote name="crdroid" fetch="https://github.com/crdroidandroid/" />
+
+    <!-- Remove -->
+    <remove-project name="frameworks_base" />
+    <remove-project name="frameworks_av" />
+    <remove-project name="packages_apps_Settings" />
+    <remove-project name="packages_modules_Bluetooth" />
+    <remove-project name="vendor_aosp" />
+    <remove-project name="vendor_google_pixel" />
+    <remove-project name="vendor_google_gms" />
+
+    <!-- 2by2 forks -->
+    <project path="frameworks/base" name="frameworks_base" revision="13" remote="2by2" />
+    <project path="frameworks/av" name="frameworks_av" revision="13" remote="2by2" />
+    <project path="packages/apps/Settings" name="packages_apps_Settings" revision="13"  remote="2by2" />
+    <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" revision="13" remote="2by2" />
+    <project path="vendor/aosp" name="vendor_aosp" revision="13" remote="2by2" />
+    <project path="vendor/2by2" name="vendor_2by2" revision="13" remote="2by2" />
+    <project path="packages/apps/2byTricks" name="packages_apps_2byTricks" revision="13" remote="2by2" />
+    <project path="vendor/google/pixel" name="vendor_google_pixel" revision="13" remote="2by2" />
+    <project path="vendor/google/gms" name="vendor_google_gms" revision="13" remote="2by2-gitlab" />
 
     <!-- crDroid -->
     <project path="packages/apps/Matlog" name="android_packages_apps_Matlog" revision="13.0" remote="crdroid" />
@@ -46,5 +67,8 @@
     <project path="kernel/google/gs201/private/google-modules/wlan/wcn6740/cnss2" name="kernel/google-modules/wlan/qcom/wcn6740/cnss2" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
     <project path="kernel/google/gs201/private/google-modules/wlan/wcn6740/wlan" name="kernel/google-modules/wlan/qcom/wcn6740/wlan" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
     <project path="kernel/google/gs201/private/google-modules/wlan/wlan_ptracker" name="kernel/google-modules/wlan/wlan_ptracker" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
+
+    <!-- Proton-clang -->
+    <project path="prebuilts/clang/host/linux-x86/proton" name="kdrag0n/proton-clang" revision="master" remote="github" />
 
 </manifest>
