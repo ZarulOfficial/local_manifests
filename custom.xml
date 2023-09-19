@@ -7,6 +7,7 @@
     <remote name="2by2-gitlab" fetch="https://gitlab.com/2by2-Project/" />
     <remote name="lineage" fetch="https://github.com/LineageOS/" />
     <remote name="crdroid" fetch="https://github.com/crdroidandroid/" />
+    <remote name="evo" fetch="https://github.com/Evolution-X/" />
 
     <!-- Remove -->
     <remove-project name="frameworks_base" />
@@ -17,6 +18,8 @@
     <remove-project name="vendor_google_pixel" />
     <remove-project name="vendor_google_gms" />
 
+    <remove-project path="packages/apps/Dialer" />
+
     <!-- 2by2 forks -->
     <project path="frameworks/base" name="frameworks_base" revision="13" remote="2by2" />
     <project path="frameworks/av" name="frameworks_av" revision="13" remote="2by2" />
@@ -25,11 +28,16 @@
     <project path="vendor/aosp" name="vendor_aosp" revision="13" remote="2by2" />
     <project path="vendor/2by2" name="vendor_2by2" revision="13" remote="2by2" />
     <project path="packages/apps/2byTricks" name="packages_apps_2byTricks" revision="13" remote="2by2" />
+    <project path="packages/apps/Dialer" name="packages_apps_Dialer" revision="13" remote="2by2" />
+    <project path="vendor/pixel-framework" name="vendor_pixel-framework" revision="13" remote="2by2" />
     <project path="vendor/google/pixel" name="vendor_google_pixel" revision="13" remote="2by2" />
     <project path="vendor/google/gms" name="vendor_google_gms" revision="13" remote="2by2-gitlab" />
 
     <!-- crDroid -->
     <project path="packages/apps/Matlog" name="android_packages_apps_Matlog" revision="13.0" remote="crdroid" />
+
+    <!-- Evolution X -->
+    <project path="packages/apps/GCamGOPrebuilt" name="packages_apps_GCamGOPrebuilt" revision="tiramisu" remote="evo" />
 
     <!-- Pixel 6/6 Pro/6a/7/7 Pro/7a/Tablet/Fold kernel modules -->
     <project path="kernel/google/gs201/private/devices/google/bluejay" name="kernel/devices/google/bluejay" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
