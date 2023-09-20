@@ -15,6 +15,7 @@
     <remove-project name="packages_apps_Settings" />
     <remove-project name="packages_modules_Bluetooth" />
     <remove-project name="vendor_aosp" />
+    <remove-project name="vendor_pixel-framework" />
     <remove-project name="vendor_google_pixel" />
     <remove-project name="vendor_google_gms" />
 
