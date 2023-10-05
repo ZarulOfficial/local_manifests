@@ -15,8 +15,13 @@
     <remove-project name="android_vendor_gapps" />
     <remove-project name="android_build" />
 
+    <remove-project path="hardware/google/pixel" />
     <remove-project path="hardware/google/gchips" />
     <remove-project path="hardware/google/graphics/common" />
+    <remove-project path="hardware/google/pixel-sepolicy" />
+
+    <remove-project path="build/make" />
+    <remove-project path="build/soong" />
 
     <!-- 2by2 forks -->
     <project path="frameworks/base" name="android_frameworks_base" revision="13" remote="2by2" />
@@ -34,8 +39,11 @@
         <linkfile src="target" dest="build/target" />
         <linkfile src="tools" dest="build/tools" />
     </project>
+    <project path="hardware/google/pixel-sepolicy" name="android_hardware_google_pixel-sepolicy" revision="13" remote="2by2" />
+    <project path="build/soong" name="android_build_soong" revision="13" remote="2by2" />
 
     <!-- Lineage -->
+    <project path="hardware/google/pixel" name="android_hardware_google_pixel" revision="lineage-20.0" remote="lineage" />
     <project path="hardware/google/gchips" name="android_hardware_google_gchips" revision="lineage-20.0" remote="lineage" />
     <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" revision="lineage-20.0" remote="lineage" />
 
