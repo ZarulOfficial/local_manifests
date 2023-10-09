@@ -21,7 +21,6 @@
     <remove-project path="hardware/google/graphics/common" />
     <remove-project path="hardware/google/pixel-sepolicy" />
 
-    <remove-project path="build/make" />
     <remove-project path="build/soong" />
 
     <!-- 2by2 forks -->
