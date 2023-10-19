@@ -8,30 +8,23 @@
     <remote name="crdroid" fetch="https://github.com/crdroidandroid/" />
 
     <!-- Remove -->
-    <remove-project name="android_frameworks_base" />
     <remove-project name="android_packages_apps_Settings" />
-    <remove-project name="android_packages_apps_Launcher3" />
     <remove-project name="android_vendor_arrow" />
-    <remove-project name="android_vendor_gapps" />
     <remove-project name="android_build" />
-    <remove-project name="android_bionic" />
-
-    <remove-project path="hardware/google/pixel" />
-    <remove-project path="hardware/google/gchips" />
-    <remove-project path="hardware/google/graphics/common" />
-    <remove-project path="hardware/google/pixel-sepolicy" />
+    
+    <!-- Build error workarounds -->
+    <remove-project name="android_hardware_qcom_display" />
+    <remove-project name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" />
+    <remove-project path="hardware/qcom/wlan" />
 
     <remove-project path="build/soong" />
 
     <!-- 2by2 forks -->
-    <project path="frameworks/base" name="android_frameworks_base" revision="13" remote="2by2" />
-    <project path="packages/apps/Settings" name="android_packages_apps_Settings" revision="13"  remote="2by2" />
-    <project path="packages/apps/2byTricks" name="packages_apps_2byTricks" revision="13" remote="2by2" />
-    <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" revision="13" remote="2by2" />
-    <project path="vendor/2by2" name="vendor_2by2" revision="13" remote="2by2" />
-    <project path="vendor/arrow" name="android_vendor_arrow" revision="13" remote="2by2" />
-    <project path="vendor/gapps" name="android_vendor_gapps" revision="13" remote="2by2-gitlab" />
-    <project path="build/make" name="android_build" revision="13" remote="2by2">
+    <project path="packages/apps/Settings" name="android_packages_apps_Settings" revision="14"  remote="2by2" />
+    <project path="vendor/2by2" name="vendor_2by2" revision="14" remote="2by2" />
+    <project path="vendor/arrow" name="android_vendor_arrow" revision="14" remote="2by2" />
+    <project path="vendor/gapps" name="android_vendor_gapps" revision="arrow-13.1" remote="arrow-gitlab" />
+    <project path="build/make" name="android_build" revision="14" remote="2by2">
         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
         <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
         <linkfile src="core" dest="build/core" />
@@ -39,54 +32,10 @@
         <linkfile src="target" dest="build/target" />
         <linkfile src="tools" dest="build/tools" />
     </project>
-    <project path="hardware/google/pixel-sepolicy" name="android_hardware_google_pixel-sepolicy" revision="13" remote="2by2" />
-    <project path="build/soong" name="android_build_soong" revision="13" remote="2by2" />
-    <project path="bionic" name="android_bionic" revision="13" remote="2by2" />
-
-    <!-- Lineage -->
-    <project path="hardware/google/pixel" name="android_hardware_google_pixel" revision="lineage-20.0" remote="lineage" />
-    <project path="hardware/google/gchips" name="android_hardware_google_gchips" revision="lineage-20.0" remote="lineage" />
-    <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" revision="lineage-20.0" remote="lineage" />
+    <project path="build/soong" name="android_build_soong" revision="14" remote="2by2" />
 
     <!-- crDroid -->
     <project path="packages/apps/Matlog" name="android_packages_apps_Matlog" revision="13.0" remote="crdroid" />
-
-    <!-- Pixel 6/6 Pro/6a/7/7 Pro/7a/Tablet/Fold kernel modules -->
-    <project path="kernel/google/gs201/private/devices/google/bluejay" name="kernel/devices/google/bluejay" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/devices/google/felix" name="kernel/devices/google/felix" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/devices/google/lynx" name="kernel/devices/google/lynx" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/devices/google/tangorpro" name="kernel/devices/google/tangorpro" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/amplifiers" name="kernel/google-modules/amplifiers" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/aoc" name="kernel/google-modules/aoc" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/aoc_ipc" name="kernel/google-modules/aoc-ipc" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/bluetooth/broadcom" name="kernel/google-modules/bluetooth/broadcom" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/bluetooth/qcom" name="kernel/google-modules/bluetooth/qcom" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/bluetooth/synaptics" name="kernel/google-modules/bluetooth/synaptics" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/bms" name="kernel/google-modules/bms" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/display" name="kernel/google-modules/display" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/edgetpu/abrolhos" name="kernel/google-modules/edgetpu/abrolhos" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/edgetpu/janeiro" name="kernel/google-modules/edgetpu/janeiro" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/fingerprint/fpc" name="kernel/google-modules/fingerprint/fpc" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/gpu" name="kernel/google-modules/gpu" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/gxp/gs201" name="kernel/google-modules/gxp/gs201" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/lwis" name="kernel/google-modules/lwis" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/nfc" name="kernel/google-modules/nfc" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/power/reset" name="kernel/google-modules/power/reset" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/sensors/hall_sensor" name="kernel/google-modules/sensors/hall_sensor" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/common" name="kernel/google-modules/touch/common" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/focaltech" name="kernel/google-modules/touch/focaltech_touch" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/fts" name="kernel/google-modules/touch/fts_touch" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/goodix" name="kernel/google-modules/touch/goodix_touch" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/novatek" name="kernel/google-modules/touch/novatek_touch" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/sec" name="kernel/google-modules/touch/sec_touch" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/touch/synaptics" name="kernel/google-modules/touch/synaptics_touch" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/uwb" name="kernel/google-modules/uwb" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/video/gchips" name="kernel/google-modules/video/gchips" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/wlan/bcmdhd4389" name="kernel/google-modules/wlan/bcmdhd/bcm4389" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/wlan/dhd43752p" name="kernel/google-modules/wlan/syna/dhd43752p" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/wlan/wcn6740/cnss2" name="kernel/google-modules/wlan/qcom/wcn6740/cnss2" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/wlan/wcn6740/wlan" name="kernel/google-modules/wlan/qcom/wcn6740/wlan" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
-    <project path="kernel/google/gs201/private/google-modules/wlan/wlan_ptracker" name="kernel/google-modules/wlan/wlan_ptracker" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.117" />
 
     <!-- Proton-clang for older kernel building -->
     <project path="prebuilts/clang/host/linux-x86/proton" name="kdrag0n/proton-clang" revision="master" remote="github" clone-depth="1" />
